@@ -1,4 +1,4 @@
-# Student Email Assistant
+# Student Email Assistant (web tool)
 
 A small, independent instructional prototype for coaching university students on drafts they have already written. **Write first. AI coaches.** It does not send email, store drafts, create accounts, track students, or include analytics. It is not an official University of Houston application.
 
