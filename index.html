@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A privacy-minded coaching tool for improving student email drafts." />
+    <title>Student Email Assistant</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">Student Email Assistant</p>
+        <h1>Write first. AI coaches.</h1>
+        <p class="lede">Write your own email, then get practical feedback before you decide what to send. This tool does not send email.</p>
+      </header>
+
+      <section class="card" aria-labelledby="draft-heading">
+        <h2 id="draft-heading">Review your draft</h2>
+        <aside class="privacy-notice" aria-labelledby="privacy-heading">
+          <h3 id="privacy-heading">Privacy notice</h3>
+          <p>Do not enter sensitive or confidential information. Do not include grades, student ID numbers, medical or disability information, financial information, passwords, disciplinary matters, or other private student information.</p>
+          <p><strong>This tool is intended only for non-sensitive communications.</strong></p>
+        </aside>
+
+        <form id="review-form" novalidate>
+          <label for="email-draft">Paste your draft email</label>
+          <p class="field-help" id="draft-help">Include only the message you want reviewed. Start with your own words; the coach will help you improve them.</p>
+          <textarea id="email-draft" name="email" rows="14" maxlength="8000" aria-describedby="draft-help character-count form-error" required placeholder="Write or paste the email draft you would like feedback on…"></textarea>
+          <div class="field-meta"><span id="character-count" aria-live="polite">0 / 8,000 characters</span></div>
+          <p id="form-error" class="message error" role="alert" hidden></p>
+          <button id="review-button" type="submit">Review my email</button>
+        </form>
+        <p id="request-status" class="message status" role="status" aria-live="polite"></p>
+      </section>
+
+      <section id="results" class="results" aria-labelledby="results-heading" hidden>
+        <div class="card">
+          <h2 id="results-heading">Email review</h2>
+          <dl class="feedback-grid">
+            <div><dt>Clarity</dt><dd id="clarity"></dd></div>
+            <div><dt>Context</dt><dd id="context"></dd></div>
+            <div><dt>Request specificity</dt><dd id="request-specificity"></dd></div>
+            <div><dt>Professionalism</dt><dd id="professionalism"></dd></div>
+            <div><dt>Concision</dt><dd id="concision"></dd></div>
+          </dl>
+          <h3>Overall feedback</h3>
+          <p id="overall-feedback" class="result-text"></p>
+        </div>
+        <div class="card">
+          <h2>Suggested revision</h2>
+          <p class="field-help">Review this carefully and keep only changes that fit your meaning and voice.</p>
+          <pre id="revised-email" class="revised-email" tabindex="0"></pre>
+          <button id="copy-button" type="button">Copy revised email</button>
+          <p id="copy-status" class="message status" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Independent instructional tool. This site does not send your email. Review all AI-generated suggestions before using them.</p>
+      <p>This tool is intended only for non-sensitive communications.</p>
+    </footer>
+    <script src="script.js" defer></script>
+  </body>
+</html>
