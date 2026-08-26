@@ -4,7 +4,7 @@
   "main": "src/index.js",
   "compatibility_date": "2026-08-26",
   "vars": {
-    "ALLOWED_ORIGIN": "https://YukiAtsusaka.github.io",
+    "ALLOWED_ORIGIN": "https://yukiatsusaka.github.io",
     "OPENAI_MODEL": "gpt-5-mini"
   }
 }
